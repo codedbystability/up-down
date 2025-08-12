@@ -366,7 +366,7 @@ const Header = () => {
                                                             type: APPEARANCE_CONSTANTS.SET_ACTIVE_LANGUAGE,
                                                             data: language?.key
                                                         })
-                                                    } className="active">
+                                                    } className={activeLanguage?.key === language?.key ? 'active' : ''}>
                                                         <img src={language?.flag} alt=""/>
                                                         {language?.title}
                                                     </a>
