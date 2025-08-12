@@ -2,12 +2,15 @@ import {useLocation, useNavigate} from "react-router-dom";
 import {toggleFullScreen} from "../../helpers/encryption";
 import {useTranslation} from "react-i18next";
 import store from "../../reducers/store";
+import APPEARANCE_CONSTANTS from "../../constants/appearance";
+import {useSelector} from "react-redux";
 
 const Menu = () => {
 
     const {t} = useTranslation()
     const navigate = useNavigate()
     const location = useLocation();
+    const {languages, activeLanguage} = useSelector(state => state.appearanceReducer)
 
     const handleHome = () => {
         const menu = document.getElementById('menu')
@@ -78,23 +81,25 @@ const Menu = () => {
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
-                        <img src="img/turkey.svg" alt=""/>
-                        <span>Türkçe</span>
+                        <img src={activeLanguage?.flag} alt=""/>
+                        <span>{activeLanguage?.title}</span>
                     </button>
                     <div className="dropdown-menu" aria-labelledby="drop030">
                         <div className="menu__lang-menu">
-                            <a href="#" className="active">
-                                <img src="img/turkey.svg" alt=""/>
-                                Turkish
-                            </a>
-                            <a href="#">
-                                <img src="img/turkey.svg" alt=""/>
-                                Turkish
-                            </a>
-                            <a href="#">
-                                <img src="img/turkey.svg" alt=""/>
-                                Turkish
-                            </a>
+                            {
+                                languages?.map(language => (
+                                    <a onClick={e =>
+                                        store.dispatch({
+                                            type: APPEARANCE_CONSTANTS.SET_ACTIVE_LANGUAGE,
+                                            data: language?.key
+                                        })
+                                    } className={activeLanguage?.key === language?.key ? 'active' : ''}>
+                                        <img src={language?.flag} alt=""/>
+                                        {language?.title}
+                                    </a>
+                                ))
+                            }
+
                         </div>
                     </div>
                 </div>
