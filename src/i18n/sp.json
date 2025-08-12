@@ -1,0 +1,63 @@
+{
+  "general": {
+    "balance": "Saldo",
+    "demo-account": "Cuenta Demo",
+    "real-account": "Cuenta Real"
+  },
+  "tabs": {
+    "my-bets": "Mis Operaciones",
+    "history": "Historial de Operaciones",
+    "high-winners": "Mayores Ganadores",
+    "parity": "Símbolo",
+    "win": "Ganancia",
+    "last-games": "Últimas {{amount}} Rondas"
+  },
+  "bet": {
+    "loading-round": "Cargando nueva ronda...",
+    "change-parity": "Cambiar símbolo",
+    "desc": "¿{{symbol}} subirá o bajará?",
+    "live-price": "Precio en vivo de {{symbol}}",
+    "up": "Arriba",
+    "down": "Abajo",
+    "live-round": "En Vivo",
+    "odds": "Cuotas",
+    "locked-price": "Precio Bloqueado",
+    "final-price": "Precio Final",
+    "no-bets-placed": "No tienes operaciones en esta ronda.",
+    "you-won": "¡Ganaste!",
+    "you-lost": "Perdiste",
+    "round-id": "ID de Ronda",
+    "last-results": "Últimos Resultados",
+    "gain-up": "Cerró Arriba",
+    "gain-down": "Cerró Abajo"
+  },
+  "notifications": {
+    "insufficent-balance": "Saldo insuficiente...",
+    "position-accepted": "{{code}} Operación aceptada.",
+    "already-have-position": "Solo puedes abrir 1 operación por ronda.",
+    "unknown-error": "No se pudo conectar con el operador"
+  },
+  "parities": {
+    "title": "Símbolos",
+    "bid_price": "Compra",
+    "ask_price": "Venta",
+    "price": "Precio",
+    "search": "Buscar símbolo",
+    "symbol": "Símbolo",
+    "choose": "Elegir"
+  },
+  "howto": {
+    "title": "¿Cómo Funciona?",
+    "d1": "Selecciona la dirección (Comprar, Vender), la tasa de [Multiplicador] y la cantidad de [Margen] que deseas comprometer.",
+    "d2": "Haz clic en Abrir Operación para seguirla en el menú de operaciones abiertas; si es rentable, haz clic en [Cerrar] para asegurar la ganancia.",
+    "d3": "Después de seleccionar el producto, establece la cantidad que deseas invertir.",
+    "d4": "Introduce la tasa del multiplicador que deseas usar.",
+    "d5": "Realiza la operación para aumentar tu ganancia."
+  },
+  "settings": {
+    "homepage": "Inicio",
+    "how-to-play": "Cómo Jugar",
+    "fullscreen": "Pantalla Completa",
+    "show-transactions": "Mostrar Operaciones"
+  }
+}

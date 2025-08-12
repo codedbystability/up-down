@@ -1,0 +1,63 @@
+{
+  "general": {
+    "balance": "Balance",
+    "demo-account": "Demo Account",
+    "real-account": "Real Account"
+  },
+  "tabs": {
+    "my-bets": "My Trades",
+    "history": "Trade History",
+    "high-winners": "Top Winners",
+    "parity": "Symbol",
+    "win": "Win",
+    "last-games": "Last {{amount}} Rounds"
+  },
+  "bet": {
+    "loading-round": "Loading New Round...",
+    "change-parity": "Change Symbol",
+    "desc": "Will {{symbol}} go Up or Down?",
+    "live-price": "Live {{symbol}} Price",
+    "up": "Up",
+    "down": "Down",
+    "live-round": "Live",
+    "odds": "Odds",
+    "locked-price": "Locked Price",
+    "final-price": "Final Price",
+    "no-bets-placed": "No trades placed for this round.",
+    "you-won": "You Won!",
+    "you-lost": "You Lost!",
+    "round-id": "Round ID",
+    "last-results": "Last Results",
+    "gain-up": "Closed Up",
+    "gain-down": "Closed Down"
+  },
+  "notifications": {
+    "insufficent-balance": "Insufficient balance...",
+    "position-accepted": "{{code}} Trade accepted.",
+    "already-have-position": "You can only open 1 trade per round.",
+    "unknown-error": "Could not connect to the operator"
+  },
+  "parities": {
+    "title": "Symbols",
+    "bid_price": "Bid",
+    "ask_price": "Ask",
+    "price": "Price",
+    "search": "Search symbol",
+    "symbol": "Symbol",
+    "choose": "Choose"
+  },
+  "howto": {
+    "title": "How It Works?",
+    "d1": "Select the direction (Buy, Sell), the [Multiplier] rate, and the [Margin] amount you want to commit.",
+    "d2": "Click Open Trade to follow your position in the open trades menu; if it becomes profitable, click [Close] to secure your profit.",
+    "d3": "After selecting the product, set the amount you want to invest.",
+    "d4": "Enter the multiplier rate you want to use.",
+    "d5": "Execute the trade to increase your profit."
+  },
+  "settings": {
+    "homepage": "Home",
+    "how-to-play": "How to Play?",
+    "fullscreen": "Full Screen",
+    "show-transactions": "Show Trades"
+  }
+}

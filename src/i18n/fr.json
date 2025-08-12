@@ -1,0 +1,63 @@
+{
+  "general": {
+    "balance": "Solde",
+    "demo-account": "Compte Démo",
+    "real-account": "Compte Réel"
+  },
+  "tabs": {
+    "my-bets": "Mes Transactions",
+    "history": "Historique des Transactions",
+    "high-winners": "Meilleurs Gagnants",
+    "parity": "Symbole",
+    "win": "Gain",
+    "last-games": "Derniers {{amount}} Tours"
+  },
+  "bet": {
+    "loading-round": "Chargement du nouveau tour...",
+    "change-parity": "Changer de symbole",
+    "desc": "{{symbol}} va-t-il monter ou descendre ?",
+    "live-price": "Prix en direct de {{symbol}}",
+    "up": "Haut",
+    "down": "Bas",
+    "live-round": "En Direct",
+    "odds": "Cotes",
+    "locked-price": "Prix Bloqué",
+    "final-price": "Prix Final",
+    "no-bets-placed": "Aucune transaction pour ce tour.",
+    "you-won": "Vous avez gagné !",
+    "you-lost": "Vous avez perdu !",
+    "round-id": "ID du Tour",
+    "last-results": "Derniers Résultats",
+    "gain-up": "Clôturé en hausse",
+    "gain-down": "Clôturé en baisse"
+  },
+  "notifications": {
+    "insufficent-balance": "Solde insuffisant...",
+    "position-accepted": "{{code}} Transaction acceptée.",
+    "already-have-position": "Vous ne pouvez ouvrir qu'une seule transaction par tour.",
+    "unknown-error": "Impossible de se connecter à l'opérateur"
+  },
+  "parities": {
+    "title": "Symboles",
+    "bid_price": "Achat",
+    "ask_price": "Vente",
+    "price": "Prix",
+    "search": "Rechercher un symbole",
+    "symbol": "Symbole",
+    "choose": "Choisir"
+  },
+  "howto": {
+    "title": "Comment Ça Marche ?",
+    "d1": "Sélectionnez la direction (Achat, Vente), le taux de [Multiplicateur] et le montant de [Marge] que vous souhaitez investir.",
+    "d2": "Cliquez sur Ouvrir Transaction pour la suivre dans le menu des transactions ouvertes ; si elle devient rentable, cliquez sur [Fermer] pour sécuriser votre gain.",
+    "d3": "Après avoir choisi le produit, définissez le montant que vous souhaitez investir.",
+    "d4": "Saisissez le taux du multiplicateur que vous souhaitez utiliser.",
+    "d5": "Exécutez la transaction pour augmenter votre gain."
+  },
+  "settings": {
+    "homepage": "Accueil",
+    "how-to-play": "Comment Jouer",
+    "fullscreen": "Plein Écran",
+    "show-transactions": "Afficher les Transactions"
+  }
+}

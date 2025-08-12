@@ -1,0 +1,10 @@
+.mySwiper {
+    width: 100%; /* Full width */
+    max-width: 100vw; /* Prevent overflow */
+    padding: 0; /* Add horizontal padding for spacing */
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+}
+
+

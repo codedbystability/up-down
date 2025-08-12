@@ -1,0 +1,63 @@
+{
+  "general": {
+    "balance": "Guthaben",
+    "demo-account": "Demo-Konto",
+    "real-account": "Echtes Konto"
+  },
+  "tabs": {
+    "my-bets": "Meine Trades",
+    "history": "Tradeverlauf",
+    "high-winners": "Top-Gewinner",
+    "parity": "Symbol",
+    "win": "Gewinn",
+    "last-games": "Letzte {{amount}} Runden"
+  },
+  "bet": {
+    "loading-round": "Neue Runde wird geladen...",
+    "change-parity": "Symbol ändern",
+    "desc": "Wird {{symbol}} steigen oder fallen?",
+    "live-price": "Live-Preis von {{symbol}}",
+    "up": "Hoch",
+    "down": "Runter",
+    "live-round": "Live",
+    "odds": "Quoten",
+    "locked-price": "Festgelegter Preis",
+    "final-price": "Endpreis",
+    "no-bets-placed": "Für diese Runde wurden keine Trades platziert.",
+    "you-won": "Du hast gewonnen!",
+    "you-lost": "Du hast verloren!",
+    "round-id": "Runden-ID",
+    "last-results": "Letzte Ergebnisse",
+    "gain-up": "Mit Anstieg abgeschlossen",
+    "gain-down": "Mit Rückgang abgeschlossen"
+  },
+  "notifications": {
+    "insufficent-balance": "Unzureichendes Guthaben...",
+    "position-accepted": "{{code}} Trade akzeptiert.",
+    "already-have-position": "Du kannst pro Runde nur 1 Trade eröffnen.",
+    "unknown-error": "Verbindung zum Betreiber fehlgeschlagen"
+  },
+  "parities": {
+    "title": "Symbole",
+    "bid_price": "Kauf",
+    "ask_price": "Verkauf",
+    "price": "Preis",
+    "search": "Symbol suchen",
+    "symbol": "Symbol",
+    "choose": "Wählen"
+  },
+  "howto": {
+    "title": "Wie funktioniert es?",
+    "d1": "Wähle die Richtung (Kaufen, Verkaufen), den [Multiplikator]-Satz und den [Margin]-Betrag, den du einsetzen möchtest.",
+    "d2": "Klicke auf Trade eröffnen, um ihn im Menü der offenen Trades zu verfolgen; wenn er profitabel wird, klicke auf [Schließen], um den Gewinn zu sichern.",
+    "d3": "Wähle nach der Produktauswahl den Betrag, den du investieren möchtest.",
+    "d4": "Gib den Multiplikator-Satz ein, den du verwenden möchtest.",
+    "d5": "Führe den Trade aus, um deinen Gewinn zu steigern."
+  },
+  "settings": {
+    "homepage": "Startseite",
+    "how-to-play": "Spielanleitung",
+    "fullscreen": "Vollbild",
+    "show-transactions": "Trades anzeigen"
+  }
+}

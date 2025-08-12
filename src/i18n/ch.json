@@ -1,0 +1,63 @@
+{
+  "general": {
+    "balance": "余额",
+    "demo-account": "演示账户",
+    "real-account": "真实账户"
+  },
+  "tabs": {
+    "my-bets": "我的交易",
+    "history": "交易记录",
+    "high-winners": "最高赢家",
+    "parity": "符号",
+    "win": "赢",
+    "last-games": "最近 {{amount}} 局"
+  },
+  "bet": {
+    "loading-round": "正在加载新的一局...",
+    "change-parity": "更改符号",
+    "desc": "{{symbol}} 会涨还是会跌？",
+    "live-price": "{{symbol}} 实时价格",
+    "up": "上涨",
+    "down": "下跌",
+    "live-round": "实时",
+    "odds": "赔率",
+    "locked-price": "锁定价格",
+    "final-price": "最终价格",
+    "no-bets-placed": "本局没有交易记录。",
+    "you-won": "你赢了！",
+    "you-lost": "你输了！",
+    "round-id": "局ID",
+    "last-results": "最近结果",
+    "gain-up": "收盘上涨",
+    "gain-down": "收盘下跌"
+  },
+  "notifications": {
+    "insufficent-balance": "余额不足...",
+    "position-accepted": "{{code}} 交易已接受。",
+    "already-have-position": "每局最多只能开一笔交易。",
+    "unknown-error": "无法连接运营商"
+  },
+  "parities": {
+    "title": "符号",
+    "bid_price": "买入",
+    "ask_price": "卖出",
+    "price": "价格",
+    "search": "搜索符号",
+    "symbol": "符号",
+    "choose": "选择"
+  },
+  "howto": {
+    "title": "如何运作？",
+    "d1": "选择方向（买入、卖出）、[倍数]比例，以及你想投入的[保证金]金额。",
+    "d2": "点击“开仓”在未平仓交易菜单中跟踪，如果盈利，点击[平仓]锁定利润。",
+    "d3": "选择产品后，设置你想投资的金额。",
+    "d4": "输入你想使用的倍数比例。",
+    "d5": "执行交易以增加利润。"
+  },
+  "settings": {
+    "homepage": "首页",
+    "how-to-play": "怎么玩",
+    "fullscreen": "全屏",
+    "show-transactions": "显示交易"
+  }
+}

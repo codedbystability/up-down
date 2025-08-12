@@ -1,0 +1,63 @@
+{
+  "general": {
+    "balance": "Saldo",
+    "demo-account": "Conto Demo",
+    "real-account": "Conto Reale"
+  },
+  "tabs": {
+    "my-bets": "Le Mie Operazioni",
+    "history": "Storico Operazioni",
+    "high-winners": "Maggiori Vincitori",
+    "parity": "Simbolo",
+    "win": "Vincita",
+    "last-games": "Ultimi {{amount}} Round"
+  },
+  "bet": {
+    "loading-round": "Caricamento nuovo round...",
+    "change-parity": "Cambia simbolo",
+    "desc": "{{symbol}} salirà o scenderà?",
+    "live-price": "Prezzo live di {{symbol}}",
+    "up": "Su",
+    "down": "Giù",
+    "live-round": "In Diretta",
+    "odds": "Quote",
+    "locked-price": "Prezzo Bloccato",
+    "final-price": "Prezzo Finale",
+    "no-bets-placed": "Nessuna operazione per questo round.",
+    "you-won": "Hai vinto!",
+    "you-lost": "Hai perso!",
+    "round-id": "ID Round",
+    "last-results": "Ultimi Risultati",
+    "gain-up": "Chiuso al rialzo",
+    "gain-down": "Chiuso al ribasso"
+  },
+  "notifications": {
+    "insufficent-balance": "Saldo insufficiente...",
+    "position-accepted": "{{code}} Operazione accettata.",
+    "already-have-position": "Puoi aprire solo 1 operazione per round.",
+    "unknown-error": "Impossibile connettersi all'operatore"
+  },
+  "parities": {
+    "title": "Simboli",
+    "bid_price": "Acquisto",
+    "ask_price": "Vendita",
+    "price": "Prezzo",
+    "search": "Cerca simbolo",
+    "symbol": "Simbolo",
+    "choose": "Scegli"
+  },
+  "howto": {
+    "title": "Come Funziona?",
+    "d1": "Seleziona la direzione (Acquista, Vendi), il tasso del [Moltiplicatore] e l'importo di [Margine] che vuoi investire.",
+    "d2": "Clicca su Apri Operazione per seguirla nel menu delle operazioni aperte; se diventa redditizia, clicca su [Chiudi] per assicurarti il profitto.",
+    "d3": "Dopo aver selezionato il prodotto, imposta l'importo che vuoi investire.",
+    "d4": "Inserisci il tasso del moltiplicatore che vuoi usare.",
+    "d5": "Esegui l'operazione per aumentare il profitto."
+  },
+  "settings": {
+    "homepage": "Home",
+    "how-to-play": "Come Giocare",
+    "fullscreen": "Schermo Intero",
+    "show-transactions": "Mostra Operazioni"
+  }
+}

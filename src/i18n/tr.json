@@ -1,0 +1,63 @@
+{
+  "general": {
+    "balance": "Bakiye",
+    "demo-account": "Deneme Hesabı",
+    "real-account": "Gerçek Hesap"
+  },
+  "tabs": {
+    "my-bets": "İşlemlerim",
+    "history": "Geçmiş İşlemler",
+    "high-winners": "Çok Kazananlar",
+    "parity": "Sembol",
+    "win": "Kazanç",
+    "last-games": "Son {{amount}} El"
+  },
+  "bet": {
+    "loading-round": "Yeni Round Yükleniyor..",
+    "change-parity": "Sembol Değiştir",
+    "desc": "{{symbol}} Aşağı mı Yukarı mı Gidecek ?",
+    "live-price": "Canlı {{symbol}} Fiyatı",
+    "up": "Yukarı",
+    "down": "Aşağı",
+    "live-round": "Canlı",
+    "odds": "Oran",
+    "locked-price": "Kilit Fiyatı",
+    "final-price": "Sonuç Fiyatı",
+    "no-bets-placed": "Bu el için işleminiz bulunmamaktadır.",
+    "you-won": "Kazandınız !",
+    "you-lost": "Kaybettiniz !",
+    "round-id": "Round Kimliği",
+    "last-results": "Son Sonuçlar",
+    "gain-up": "Yukarı Sonuçlandı",
+    "gain-down": "Aşağı Sonuçlandı"
+  },
+  "notifications": {
+    "insufficent-balance": "Yetersiz bakiye...",
+    "position-accepted": "{{code}} İşlem kabul edildi.",
+    "already-have-position": "Bir round için maksimum 1 işlem açabilirsiniz.",
+    "unknown-error": "Operatör ile iletişim kurulamadı"
+  },
+  "parities": {
+    "title": "Semboller",
+    "bid_price": "Alış",
+    "ask_price": "Satış",
+    "price": "Fiyat",
+    "search": "Sembol arayınız",
+    "symbol": "Sembol",
+    "choose": "Seç"
+  },
+  "howto": {
+    "title": "Nasıl Çalışır?",
+    "d1": "İşlem yapacağınız yönü(Al, Sat), [Çarpan] oranını ve Bağlayacağınız [Teminat] Miktarını belirleyiniz.",
+    "d2": "İşlem aç'a tıklayarak açık işlemler menüsünde işleminizi takip edip; Kazanca geçmeniz durumunda [Kapat] tuşuna tıklayarak kazanç elde edebilirsiniz.",
+    "d3": "Ürün seçimi yapıldıktan sonra yatırım yapacağınız Miktar oranını belirleyin.",
+    "d4": "Kullanmak istediğiniz çarpan oranını girin.",
+    "d5": "İşlemi yaparak kazancınızı artırın."
+  },
+  "settings": {
+    "homepage": "Anasayfa",
+    "how-to-play": "Nasıl Oynanır ?",
+    "fullscreen": "Tam Ekran",
+    "show-transactions": "İşlemleri Göster"
+  }
+}

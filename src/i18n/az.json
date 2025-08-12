@@ -1,0 +1,63 @@
+{
+  "general": {
+    "balance": "Balans",
+    "demo-account": "Demo Hesabı",
+    "real-account": "Real Hesab"
+  },
+  "tabs": {
+    "my-bets": "Mənim Əməliyyatlarım",
+    "history": "Əməliyyat Tarixi",
+    "high-winners": "Ən Çox Qazananlar",
+    "parity": "Simvol",
+    "win": "Qazanc",
+    "last-games": "Son {{amount}} Raund"
+  },
+  "bet": {
+    "loading-round": "Yeni raund yüklənir...",
+    "change-parity": "Simvolu dəyiş",
+    "desc": "{{symbol}} yuxarı qalxacaq yoxsa enəcək?",
+    "live-price": "{{symbol}} Canlı Qiyməti",
+    "up": "Yuxarı",
+    "down": "Aşağı",
+    "live-round": "Canlı",
+    "odds": "Əmsallar",
+    "locked-price": "Kilidlənmiş Qiymət",
+    "final-price": "Son Qiymət",
+    "no-bets-placed": "Bu raund üçün əməliyyatınız yoxdur.",
+    "you-won": "Qazandınız!",
+    "you-lost": "Uduzdunuz!",
+    "round-id": "Raund ID",
+    "last-results": "Son Nəticələr",
+    "gain-up": "Yuxarı Bitdi",
+    "gain-down": "Aşağı Bitdi"
+  },
+  "notifications": {
+    "insufficent-balance": "Balans kifayət etmir...",
+    "position-accepted": "{{code}} Əməliyyat qəbul edildi.",
+    "already-have-position": "Bir raund üçün maksimum 1 əməliyyat aça bilərsiniz.",
+    "unknown-error": "Operator ilə əlaqə qurulmadı"
+  },
+  "parities": {
+    "title": "Simvollar",
+    "bid_price": "Alış",
+    "ask_price": "Satış",
+    "price": "Qiymət",
+    "search": "Simvol axtarın",
+    "symbol": "Simvol",
+    "choose": "Seç"
+  },
+  "howto": {
+    "title": "Necə İşləyir?",
+    "d1": "İstiqaməti (Al, Sat), [Çarpan] əmsalını və bağlayacağınız [Təminat] miqdarını seçin.",
+    "d2": "Əməliyyat Aç düyməsinə klikləyərək əməliyyatınızı izləyin; qazanc əldə etdikdə [Bağla] düyməsinə klikləyərək qazancı götürə bilərsiniz.",
+    "d3": "Məhsul seçildikdən sonra yatıracağınız məbləği təyin edin.",
+    "d4": "İstifadə etmək istədiyiniz çarpan əmsalını daxil edin.",
+    "d5": "Əməliyyatı icra edərək qazancınızı artırın."
+  },
+  "settings": {
+    "homepage": "Ana Səhifə",
+    "how-to-play": "Necə Oynanır?",
+    "fullscreen": "Tam Ekran",
+    "show-transactions": "Əməliyyatları Göstər"
+  }
+}

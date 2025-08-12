@@ -1,0 +1,63 @@
+{
+  "general": {
+    "balance": "残高",
+    "demo-account": "デモアカウント",
+    "real-account": "リアルアカウント"
+  },
+  "tabs": {
+    "my-bets": "マイトレード",
+    "history": "取引履歴",
+    "high-winners": "トップ勝者",
+    "parity": "シンボル",
+    "win": "勝利",
+    "last-games": "直近 {{amount}} ラウンド"
+  },
+  "bet": {
+    "loading-round": "新しいラウンドを読み込み中...",
+    "change-parity": "シンボル変更",
+    "desc": "{{symbol}} は上がりますか？下がりますか？",
+    "live-price": "ライブ {{symbol}} 価格",
+    "up": "上",
+    "down": "下",
+    "live-round": "ライブ",
+    "odds": "オッズ",
+    "locked-price": "ロック価格",
+    "final-price": "最終価格",
+    "no-bets-placed": "このラウンドでの取引はありません。",
+    "you-won": "勝ちました！",
+    "you-lost": "負けました！",
+    "round-id": "ラウンドID",
+    "last-results": "直近の結果",
+    "gain-up": "上昇で終了",
+    "gain-down": "下降で終了"
+  },
+  "notifications": {
+    "insufficent-balance": "残高不足...",
+    "position-accepted": "{{code}} 取引が承認されました。",
+    "already-have-position": "1ラウンドにつき最大1件の取引のみ可能です。",
+    "unknown-error": "オペレーターに接続できません"
+  },
+  "parities": {
+    "title": "シンボル",
+    "bid_price": "買い",
+    "ask_price": "売り",
+    "price": "価格",
+    "search": "シンボル検索",
+    "symbol": "シンボル",
+    "choose": "選択"
+  },
+  "howto": {
+    "title": "使い方",
+    "d1": "方向（買い、売り）、[倍率] の割合、および投資する [証拠金] の金額を選択します。",
+    "d2": "「取引を開く」をクリックしてオープン取引メニューで追跡し、利益が出たら [閉じる] をクリックして利益を確定します。",
+    "d3": "商品を選択後、投資額を設定します。",
+    "d4": "使用する倍率を入力します。",
+    "d5": "取引を実行して利益を増やします。"
+  },
+  "settings": {
+    "homepage": "ホーム",
+    "how-to-play": "遊び方",
+    "fullscreen": "全画面",
+    "show-transactions": "取引を表示"
+  }
+}
