@@ -1,7 +1,5 @@
-import RightIndex from "../homepage/right";
 import RightContent from "../homepage/right/content";
-import {BottomSheet, BottomSheetRef} from 'react-spring-bottom-sheet'
-import {useCallback, useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {useSelector} from "react-redux";
 import './index.css'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
