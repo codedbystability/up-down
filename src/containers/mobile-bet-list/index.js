@@ -27,12 +27,13 @@ const MobileBetList = () => {
 
 
     return (
-        <div ref={containerRef} className="bottom-sheet" id="mobile-bet-list">
+        <div ref={containerRef}  id="mobile-bet-list">
 
             {/* your container content */}
             <SwipeableDrawer
                 anchor="bottom"
                 open={open}
+                onClose={handleClose}
                 // 👇 Mount the drawer inside this container, not body
                 container={containerRef.current}
                 // Make it cover only the container area
@@ -56,14 +57,11 @@ const MobileBetList = () => {
                     },
                 }}
             >
-                <div className="bottom-sheet__handle" onClick={handleClose}>
-                    <span>
-                        Close
-                    </span>
-                </div>
+
                 <div className="bottom-sheet__content">
                     <RightContent/>
                 </div>
+
             </SwipeableDrawer>
         </div>
     )

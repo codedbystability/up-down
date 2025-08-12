@@ -1856,6 +1856,7 @@ const informationStates = {
     visibilityStatus: 'visible',
     myBets: [],
     showTransactionsSheet: false,
+    showParityList: false,
     myBetsCount: 0,
     publicBets: [],
     positionDetail: {},
@@ -1995,6 +1996,11 @@ const informationReducer = (state = informationStates, action) => {
                 modalType: action.data ? 'detail' : ''
             }
 
+        case 'SET_SHOW_PARITY_LIST':
+            return {
+                ...state,
+                showParityList: action.data
+            }
         case 'SET_TRANSACTIONS_SHEET':
             return {
                 ...state,

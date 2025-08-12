@@ -55,9 +55,11 @@ const MiddleBet = props => {
     }, [round?.start_time]);
 
     const handleMobileParityList = () => {
-        const bottomSheet = document.getElementById('mobile-parity-list')
-        if (bottomSheet)
-            bottomSheet?.classList?.toggle('open')
+
+        store.dispatch({type: 'SET_SHOW_PARITY_LIST', data: true})
+        // const bottomSheet = document.getElementById('mobile-parity-list')
+        // if (bottomSheet)
+        //     bottomSheet?.classList?.toggle('open')
     }
 
     const [amount, setAmount] = useState(50)

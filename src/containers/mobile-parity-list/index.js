@@ -1,6 +1,6 @@
 import {useTranslation} from "react-i18next";
 import {useSelector} from "react-redux";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import store from "../../reducers/store";
 import INFORMATION_CONSTANTS from "../../constants/information";
 import Big from "big.js";
@@ -8,17 +8,24 @@ import INFORMATION_ACTIONS from "../../actions/information";
 import InstrumentIcon from "../../components/instrument-icon";
 import PriceDisplay from "../../components/price-display";
 import {createSfxManager} from "../../components/sfx";
+import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import RightContent from "../homepage/right/content";
 
 const sfx = createSfxManager();
 const MobileBottomSheet = () => {
 
     const {t} = useTranslation()
     const {instruments} = useSelector(state => state.dataReducer);
-    const {activeParity} = useSelector(state => state.informationReducer)
+    const {activeParity, showParityList} = useSelector(state => state.informationReducer)
 
     const [search, setSearch] = useState("")
     const [filtered, setFiltered] = useState([])
     const [filteredParitiesUpdates, setFilteredParitiesUpdates] = useState([])
+
+    const containerRef = useRef(null);
+    const [open, setOpen] = useState(false);
+
+
     useEffect(() => {
         // // console.log('search = ', search)
         search ? setFiltered(instruments?.filter(i =>
@@ -26,16 +33,6 @@ const MobileBottomSheet = () => {
             i?.desc?.toUpperCase().includes(search?.toUpperCase())
         )) : setFiltered(instruments)
     }, [instruments, search])
-    const handleParityChange = parity => {
-        // if (!parity?.enabled || parity?.closed)
-        //     return toast.error(t('notifications.market-closed'))
-
-        // console.log(parity)
-        if (activeParity?.code === parity?.code) return;
-
-        store.dispatch({type: INFORMATION_CONSTANTS.SET_PARITY, data: parity})
-        store.dispatch({type: INFORMATION_CONSTANTS.SHOW_SYMBOL_LIST, data: false})
-    };
 
     const handleUpdateL = (e) => {
         const data = JSON.parse(e)
@@ -96,61 +93,77 @@ const MobileBottomSheet = () => {
         }
     }, [filtered, window?.globalDataSocket?.connected])
 
-    const handleClose = () => {
-        const bottomSheet = document.getElementById('mobile-parity-list')
-        if (bottomSheet)
-            bottomSheet?.classList?.remove('open')
-    }
 
     useEffect(() => {
         handleClose()
 
         sfx?.success()
     }, [activeParity?.code])
-    return (
-        <div className="bottom-sheet" id="mobile-parity-list">
-            <div className="bottom-sheet__handle" onClick={handleClose}>
-                <span>Close</span>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M18 6l-12 12"/>
-                    <path d="M6 6l12 12"/>
-                </svg>
-            </div>
-            <div className="bottom-sheet__content">
-                <div className="tab-content">
 
-                    <div className="sidebar__content">
-                        {/*<input*/}
-                        {/*    value={search}*/}
-                        {/*    onChange={e => setSearch(e.target.value)}*/}
-                        {/*    type="text"*/}
-                        {/*    className="form__search"*/}
-                        {/*    placeholder="Search Symbol"*/}
-                        {/*/>*/}
-                        <div className="xtable">
-                            <div className="xtable__title">
-                                <span>Symbol</span>
-                                <span>Bid</span>
-                            </div>
-                            <div className="xtable__content xtable__content--track">
-                                {/* .btc .eth .bnb .sol .xrp .ada .doge .ltc */}
-                                {
-                                    filteredParitiesUpdates?.map(instrument => (
-                                        <button
-                                            key={instrument.code}
-                                            onClick={e => store.dispatch(INFORMATION_ACTIONS.setParity(instrument))}
-                                            className={`pair ${instrument.code?.substring(0, 3)?.toLowerCase()} ${activeParity?.code === instrument?.code ? 'active' : ''}`}
-                                            type="button">
+    const handleClose = () =>
+        store.dispatch({type: "SET_SHOW_PARITY_LIST", data: null})
+
+
+    useEffect(() => {
+        setOpen(Boolean(showParityList))
+    }, [showParityList])
+
+
+    return (
+        <div ref={containerRef} className="bottom-sheet" id="mobile-parity-list">
+            <SwipeableDrawer
+                anchor="bottom"
+                open={open}
+                onClose={handleClose}
+                // 👇 Mount the drawer inside this container, not body
+                container={containerRef.current}
+                // Make it cover only the container area
+                ModalProps={{keepMounted: true}}
+                PaperProps={{
+                    sx: {
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                        backgroundColor: '#0e121d',
+                        color: 'inherit',
+                        // keep it within the container height
+                        maxHeight: '90%',
+                        width: '100%',
+                        boxShadow: 'none',
+                    },
+                }}
+                // Backdrop inside the container
+                BackdropProps={{
+                    sx: {
+                        backgroundColor: 'rgba(0,0,0,0.35)',
+                    },
+                }}
+            >
+
+                <div className="bottom-sheet__content">
+                    <div className="tab-content">
+
+                        <div className="sidebar__content">
+                            {/*<input*/}
+                            {/*    value={search}*/}
+                            {/*    onChange={e => setSearch(e.target.value)}*/}
+                            {/*    type="text"*/}
+                            {/*    className="form__search"*/}
+                            {/*    placeholder="Search Symbol"*/}
+                            {/*/>*/}
+                            <div className="xtable">
+                                <div className="xtable__title">
+                                    <span>Symbol</span>
+                                    <span>Bid</span>
+                                </div>
+                                <div className="xtable__content xtable__content--track">
+                                    {/* .btc .eth .bnb .sol .xrp .ada .doge .ltc */}
+                                    {
+                                        filteredParitiesUpdates?.map(instrument => (
+                                            <button
+                                                key={instrument.code}
+                                                onClick={e => store.dispatch(INFORMATION_ACTIONS.setParity(instrument))}
+                                                className={`pair ${instrument.code?.substring(0, 3)?.toLowerCase()} ${activeParity?.code === instrument?.code ? 'active' : ''}`}
+                                                type="button">
                                                       <span className="pair__coin">
                                                           <InstrumentIcon small={true} code={instrument.code}/>
                                                         <span>
@@ -158,23 +171,28 @@ const MobileBottomSheet = () => {
                                                           <small>{instrument.desc}</small>
                                                         </span>
                                                       </span>
-                                            <span className="pair__price">
+                                                <span className="pair__price">
                                                         <PriceDisplay
                                                             amount={instrument.b}
                                                             digits={instrument?.digits}/>
-                                                {/*<span>$</span>86,526<span>.838</span>*/}
+                                                    {/*<span>$</span>86,526<span>.838</span>*/}
                                                       </span>
-                                        </button>
-                                    ))
-                                }
+                                            </button>
+                                        ))
+                                    }
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
+
+            </SwipeableDrawer>
+
         </div>
 
+
     )
+
 }
 export default MobileBottomSheet
