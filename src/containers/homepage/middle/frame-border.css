@@ -1,44 +1,52 @@
 /* animatable props */
-@property --angle { syntax:"<angle>"; inherits:false; initial-value:0deg; }
-@property --glint { syntax:"<number>"; inherits:false; initial-value:0; }
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+@property --glint {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
 
-:root{
-    --green:#66d535;
-    --red:#e32322;
-    --border-thickness: 3px;   /* neon ring width */
+:root {
+    --green: #66d535;
+    --red: #e32322;
+    --border-thickness: 3px; /* neon ring width */
     --radius: 12px;
 }
 
 /* FRAME */
-.frame--border{
+.frame--border {
     position: relative;
     border-radius: var(--radius);
-    background: #0e121d;              /* your inner panel fill */
-    padding: 12px;
-    isolation:isolate;
+    background: #0e121d; /* your inner panel fill */
+    /*padding: 12px;*/
+    isolation: isolate;
     /* crisp inner seating line */
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .04);
 }
 
 /* OUTER NEON RING */
-.frame--border::before{
-    content:"";
-    position:absolute; inset:0;
+.frame--border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     padding: var(--border-thickness);
     border-radius: inherit;
 
     /* rotating base + subtle dash + moving glint */
-    background:
-            conic-gradient(from var(--angle),
-            var(--green) 0turn .33turn,
-            var(--red)   .5turn .83turn,
-            var(--green) 1turn),
-            repeating-conic-gradient(from calc(var(--angle) * -1),
-            rgba(255,255,255,.10) 0 6deg,
+    background: conic-gradient(from var(--angle),
+    var(--green) 0turn .33turn,
+    var(--red) .5turn .83turn,
+    var(--green) 1turn),
+    repeating-conic-gradient(from calc(var(--angle) * -1),
+            rgba(255, 255, 255, .10) 0 6deg,
             transparent 6deg 12deg),
-            conic-gradient(from calc(var(--glint) * 1turn),
+    conic-gradient(from calc(var(--glint) * 1turn),
             transparent 0turn .985turn,
-            rgba(255,255,255,.95) 0turn,
+            rgba(255, 255, 255, .95) 0turn,
             transparent 1turn);
     background-blend-mode: normal, overlay, screen;
 
@@ -48,64 +56,81 @@
     mask-composite: exclude;
 
     animation: spin 2s linear infinite, glint 2.4s linear infinite;
-    pointer-events:none;
+    pointer-events: none;
 }
 
 /* SOFT OUTER GLOW */
-.frame--border::after{
-    content:"";
-    position:absolute; inset:-10px;
+.frame--border::after {
+    content: "";
+    position: absolute;
+    inset: -10px;
     border-radius: inherit;
-    pointer-events:none;
+    pointer-events: none;
     filter: blur(6px);
-    opacity:.35;
-    box-shadow:
-            0 0 26px rgba(102,213,53,.28),
-            0 0 30px rgba(227,35,34,.18);
+    opacity: .35;
+    box-shadow: 0 0 26px rgba(102, 213, 53, .28),
+    0 0 30px rgba(227, 35, 34, .18);
     animation: breathe 3.2s ease-in-out infinite;
 }
 
 /* CORNER ACCENT LEDs (subtle) */
-.frame--border{
-    background:
-            radial-gradient(12px 12px at 12px 12px, rgba(102,213,53,.22), transparent 60%),
-            radial-gradient(12px 12px at calc(100% - 12px) 12px, rgba(102,213,53,.18), transparent 60%),
-            radial-gradient(12px 12px at 12px calc(100% - 12px), rgba(227,35,34,.18), transparent 60%),
-            radial-gradient(12px 12px at calc(100% - 12px) calc(100% - 12px), rgba(227,35,34,.22), transparent 60%),
-            #0e121d; /* base fill last */
+.frame--border {
+    background: radial-gradient(12px 12px at 12px 12px, rgba(102, 213, 53, .22), transparent 60%),
+    radial-gradient(12px 12px at calc(100% - 12px) 12px, rgba(102, 213, 53, .18), transparent 60%),
+    radial-gradient(12px 12px at 12px calc(100% - 12px), rgba(227, 35, 34, .18), transparent 60%),
+    radial-gradient(12px 12px at calc(100% - 12px) calc(100% - 12px), rgba(227, 35, 34, .22), transparent 60%),
+    #0e121d; /* base fill last */
 }
 
 /* VARIANTS: bias toward win/lose */
-.frame--border.win::before{
-    background:
-            conic-gradient(from var(--angle),
-            var(--green) 0turn .75turn,
-            var(--red)   .82turn .92turn,
-            var(--green) 1turn),
-            repeating-conic-gradient(from calc(var(--angle) * -1),
-            rgba(255,255,255,.10) 0 6deg, transparent 6deg 12deg),
-            conic-gradient(from calc(var(--glint) * 1turn),
-            transparent 0turn .985turn, rgba(255,255,255,.95) 0turn, transparent 1turn);
+.frame--border.win::before {
+    background: conic-gradient(from var(--angle),
+    var(--green) 0turn .75turn,
+    var(--red) .82turn .92turn,
+    var(--green) 1turn),
+    repeating-conic-gradient(from calc(var(--angle) * -1),
+            rgba(255, 255, 255, .10) 0 6deg, transparent 6deg 12deg),
+    conic-gradient(from calc(var(--glint) * 1turn),
+            transparent 0turn .985turn, rgba(255, 255, 255, .95) 0turn, transparent 1turn);
 }
-.frame--border.lose::before{
-    background:
-            conic-gradient(from var(--angle),
-            var(--red)   0turn .75turn,
-            var(--green) .82turn .92turn,
-            var(--red)   1turn),
-            repeating-conic-gradient(from calc(var(--angle) * -1),
-            rgba(255,255,255,.10) 0 6deg, transparent 6deg 12deg),
-            conic-gradient(from calc(var(--glint) * 1turn),
-            transparent 0turn .985turn, rgba(255,255,255,.95) 0turn, transparent 1turn);
+
+.frame--border.lose::before {
+    background: conic-gradient(from var(--angle),
+    var(--red) 0turn .75turn,
+    var(--green) .82turn .92turn,
+    var(--red) 1turn),
+    repeating-conic-gradient(from calc(var(--angle) * -1),
+            rgba(255, 255, 255, .10) 0 6deg, transparent 6deg 12deg),
+    conic-gradient(from calc(var(--glint) * 1turn),
+            transparent 0turn .985turn, rgba(255, 255, 255, .95) 0turn, transparent 1turn);
 }
 
 /* Hover = a touch more energy */
-.frame--border:hover::before{ animation-duration: 4s, 1.6s; }
+.frame--border:hover::before {
+    animation-duration: 4s, 1.6s;
+}
 
 /* Animations */
-@keyframes spin { to { --angle: 360deg; } }
-@keyframes glint { to { --glint: 1; } }
-@keyframes breathe { 0%,100%{opacity:.35} 50%{opacity:.8} }
+@keyframes spin {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@keyframes glint {
+    to {
+        --glint: 1;
+    }
+}
+
+@keyframes breathe {
+    0%, 100% {
+        opacity: .35
+    }
+    50% {
+        opacity: .8
+    }
+}
 
 
 /* animations */

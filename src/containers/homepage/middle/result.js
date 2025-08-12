@@ -156,12 +156,6 @@ const Result = props => {
                     </div>
                 </div>
 
-                {
-                    round?.result === 'down' ? <LoadingCompRed/>
-                        :
-                        <LoadingComp/>
-                }
-
             </div>
         </div>
 
