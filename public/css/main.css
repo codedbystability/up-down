@@ -5420,14 +5420,17 @@ input[type="range"]:focus {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: -100%;
+    bottom: -100%; /* open state */
     background: #0e121d;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     transition: bottom .4s ease;
     z-index: 999;
-    /*min-height: 84%;*/
-    /*height: 84%;*/
+    /* Respect iOS/Android safe area */
+    padding-bottom: env(safe-area-inset-bottom);
+    /* Optional: max height to avoid overscrolling */
+    max-height: calc(100vh - env(safe-area-inset-bottom));
+    overflow-y: auto;
 }
 
 .bottom-sheet.open {
