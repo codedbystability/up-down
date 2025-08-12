@@ -13,10 +13,21 @@ import Header from "./containers/header";
 import Menu from "./containers/menu";
 import {ToastContainer} from "react-toastify";
 import './i18n/i18n'
+import {useEffect} from "react";
 
 function App() {
 
 
+    useEffect(() => {
+        function setVh() {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+        }
+
+        window.addEventListener('resize', setVh);
+
+        return () => window.removeEventListener('resize', setVh);
+
+    }, [])
     const Layout = () => {
         return (
             <>
@@ -40,7 +51,7 @@ function App() {
     return (
         <Provider store={store}>
             <RouterProvider router={router}/>
-            <ToastContainer theme={'dark'} />
+            <ToastContainer theme={'dark'}/>
         </Provider>
     );
 }
