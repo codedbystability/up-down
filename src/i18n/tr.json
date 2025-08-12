@@ -35,6 +35,7 @@
     "insufficent-balance": "Yetersiz bakiye...",
     "position-accepted": "{{code}} İşlem kabul edildi.",
     "already-have-position": "Bir round için maksimum 1 işlem açabilirsiniz.",
+    "not-valid-round-status": "Bir sonraki eli bekleyiniz.",
     "unknown-error": "Operatör ile iletişim kurulamadı"
   },
   "parities": {

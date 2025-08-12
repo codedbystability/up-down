@@ -138,7 +138,6 @@ const MiddleIndex = () => {
     }, [window?.tcpSocketServer?.connected, activeParity?.code])
 
 
-    return <MiddleBet round={round}/>
 
     if (state === 'loading')
         return <MiddleLoading round={round}/>
