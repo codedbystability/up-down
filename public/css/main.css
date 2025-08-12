@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Russo+One&display=swap");
+
 :root {
     --vh: 100%;
 }
@@ -324,9 +325,10 @@ input[type="range"]:focus {
 
 .header__drop {
     display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    gap: 8px;
+    /*flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
     position: relative
 }
 
@@ -352,6 +354,10 @@ input[type="range"]:focus {
     color: #fff;
     font-weight: 800;
     margin-bottom: 0
+}
+
+.header__drop span {
+    color: #424f66;
 }
 
 .header__drop-btn {

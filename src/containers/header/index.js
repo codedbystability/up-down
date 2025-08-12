@@ -271,7 +271,7 @@ const Header = () => {
                             {/*</div>*/}
                             <div className="header__drop dropdown">
                                 <img src="img/wallet.svg" alt=""/>
-                                <p>{t('general.balance')}</p>
+                                <span>{t('general.balance')}</span>
                                 <button
                                     className="header__drop-btn"
                                     type="button"
@@ -279,7 +279,9 @@ const Header = () => {
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false"
                                 >
-                                    {Big(user?.balance || 0).toFixed(2)}
+                                    <p>
+                                        {Big(user?.balance || 0).toFixed(2)}
+                                    </p>
                                     <svg
                                         width={9}
                                         height={9}
