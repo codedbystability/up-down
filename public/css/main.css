@@ -26,6 +26,22 @@ body {
     height: 100%;
 }
 
+.container {
+    /* prefer the *small* viewport so it fits when URL bar is visible */
+    height: 100%; /* modern: iOS 16+/Android 108+ */
+}
+
+/* Fallback for older browsers without svh/dvh */
+@supports not (height: 100svh) {
+    :root {
+        --vh: 1vh;
+    }
+
+    .container {
+        height: calc(var(--vh) * 100);
+    }
+}
+
 button {
     padding: 0;
     border: none;
@@ -5434,7 +5450,7 @@ input[type="range"]:focus {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: -100vh; /* open state */
+    bottom: -100%; /* open state */
     background: #0e121d;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
