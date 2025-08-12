@@ -301,7 +301,7 @@ input[type="range"]:focus {
 .header {
     position: relative;
     width: 100%;
-    padding: 16px 0
+    padding: 8px 0
 }
 
 .header__content {
@@ -640,7 +640,7 @@ input[type="range"]:focus {
 .menu {
     position: fixed;
     z-index: 99;
-    top: 72px;
+    top: 48px;
     left: 0;
     width: 100vw;
     bottom: 0;
@@ -2978,7 +2978,7 @@ input[type="range"]:focus {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 180px;
+    height: 144px;
     border-radius: 16px;
     background-color: #0f5eff;
     border: 2px solid #fff
@@ -3007,8 +3007,8 @@ input[type="range"]:focus {
 
 .victory__value {
     font-family: 'Russo One', sans-serif;
-    font-size: 64px;
-    line-height: 80px;
+    font-size: 48px;
+    line-height: 48px;
     color: #fff;
     margin-bottom: 10px
 }
@@ -3058,7 +3058,7 @@ input[type="range"]:focus {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 180px;
+    height: 144px;
     background-color: rgba(66, 79, 102, 0.24);
     border: 2px solid rgba(255, 255, 255, 0.24);
     border-radius: 16px
