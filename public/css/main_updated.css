@@ -4010,7 +4010,8 @@ input[type="range"]:focus {
     height: 48px;
     background-color: rgba(66, 79, 102, 0.24);
     border-radius: 8px;
-    overflow: hidden
+    overflow: hidden;
+    margin-top: 12px;
 }
 
 .apigame__wager-inpit {
