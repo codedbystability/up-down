@@ -57,6 +57,7 @@ const MobileBetList = () => {
                     },
                 }}
             >
+                <div className="drawer-handle" />
 
                 <div className="bottom-sheet__content">
                     <RightContent/>

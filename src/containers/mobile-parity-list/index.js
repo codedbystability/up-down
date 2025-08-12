@@ -138,6 +138,7 @@ const MobileBottomSheet = () => {
                     },
                 }}
             >
+                <div className="drawer-handle" />
 
                 <div className="bottom-sheet__content">
                     <div className="tab-content">
