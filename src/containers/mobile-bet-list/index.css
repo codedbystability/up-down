@@ -1,0 +1,15 @@
+/* Header / handle */
+.bottom-sheet__handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Content area */
+.bottom-sheet__content {
+    padding: 12px 16px calc(env(safe-area-inset-bottom, 0px) + 16px);
+}

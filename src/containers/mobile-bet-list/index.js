@@ -1,42 +1,73 @@
 import RightIndex from "../homepage/right";
 import RightContent from "../homepage/right/content";
+import {BottomSheet, BottomSheetRef} from 'react-spring-bottom-sheet'
+import {useCallback, useEffect, useRef, useState} from "react";
+import {useSelector} from "react-redux";
+import './index.css'
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import store from "../../reducers/store";
 
 const MobileBetList = () => {
+    const containerRef = useRef(null);
+    const [open, setOpen] = useState(false);
 
 
-    const handleClose = () => {
-        const mobileBetList = document.getElementById('mobile-bet-list')
-        if (mobileBetList)
-            mobileBetList?.classList?.toggle('open')
-    }
+    const {showTransactionsSheet} = useSelector(state => state.informationReducer)
+
+    const handleClose = () =>
+        store.dispatch({type: "SET_TRANSACTIONS_SHEET", data: null})
+
+
+    useEffect(() => {
+        if (showTransactionsSheet)
+            setOpen(true)
+        else
+            setOpen(false)
+        // sheetRef.current.snapTo(({maxHeight}) => maxHeight)
+
+    }, [showTransactionsSheet])
+
+
     return (
+        <div ref={containerRef} className="bottom-sheet" id="mobile-bet-list">
 
-        <div className="bottom-sheet" id="mobile-bet-list">
-            <div className="bottom-sheet__handle" onClick={handleClose}>
-                <span>Close</span>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M18 6l-12 12"/>
-                    <path d="M6 6l12 12"/>
-                </svg>
-            </div>
-
-            <div className="bottom-sheet__content">
-                <RightContent/>
-            </div>
-
-
+            {/* your container content */}
+            <SwipeableDrawer
+                anchor="bottom"
+                open={open}
+                // 👇 Mount the drawer inside this container, not body
+                container={containerRef.current}
+                // Make it cover only the container area
+                ModalProps={{keepMounted: true}}
+                PaperProps={{
+                    sx: {
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                        backgroundColor: '#0e121d',
+                        color: 'inherit',
+                        // keep it within the container height
+                        maxHeight: '90%',
+                        width: '100%',
+                        boxShadow: 'none',
+                    },
+                }}
+                // Backdrop inside the container
+                BackdropProps={{
+                    sx: {
+                        backgroundColor: 'rgba(0,0,0,0.35)',
+                    },
+                }}
+            >
+                <div className="bottom-sheet__handle" onClick={handleClose}>
+                    <span>
+                        Close
+                    </span>
+                </div>
+                <div className="bottom-sheet__content">
+                    <RightContent/>
+                </div>
+            </SwipeableDrawer>
         </div>
-
     )
 }
 export default MobileBetList

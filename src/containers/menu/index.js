@@ -1,6 +1,7 @@
 import {useLocation, useNavigate} from "react-router-dom";
 import {toggleFullScreen} from "../../helpers/encryption";
 import {useTranslation} from "react-i18next";
+import store from "../../reducers/store";
 
 const Menu = () => {
 
@@ -24,11 +25,13 @@ const Menu = () => {
     const handleTransactions = () => {
         const menu = document.getElementById('menu')
         menu?.classList?.remove('menu--active')
+        //
+        //
+        // const bottomSheet = document.getElementById('mobile-bet-list')
+        // if (bottomSheet)
+        //     bottomSheet?.classList?.toggle('open')
 
-
-        const bottomSheet = document.getElementById('mobile-bet-list')
-        if (bottomSheet)
-            bottomSheet?.classList?.toggle('open')
+        store.dispatch({type: "SET_TRANSACTIONS_SHEET", data: 'my-bets'})
     }
 
     const handleHowToPlay = () => {

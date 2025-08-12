@@ -1855,6 +1855,7 @@ const informationStates = {
     lastData: {},
     visibilityStatus: 'visible',
     myBets: [],
+    showTransactionsSheet: false,
     myBetsCount: 0,
     publicBets: [],
     positionDetail: {},
@@ -1994,6 +1995,11 @@ const informationReducer = (state = informationStates, action) => {
                 modalType: action.data ? 'detail' : ''
             }
 
+        case 'SET_TRANSACTIONS_SHEET':
+            return {
+                ...state,
+                showTransactionsSheet: action.data
+            }
 
         case INFORMATION_CONSTANTS.SET_NEW_BET:
             return {
