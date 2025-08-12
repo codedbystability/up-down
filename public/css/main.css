@@ -5440,6 +5440,8 @@ input[type="range"]:focus {
     border-top-right-radius: 16px;
     transition: bottom .4s ease;
     z-index: 999;
+    visibility: hidden;
+    display: none;
     /* Respect iOS/Android safe area */
     padding-bottom: env(safe-area-inset-bottom);
     /* Optional: max height to avoid overscrolling */
@@ -5448,7 +5450,9 @@ input[type="range"]:focus {
 }
 
 .bottom-sheet.open {
-    bottom: 0
+    bottom: 0;
+    visibility: unset;
+    display: unset;
 }
 
 .bottom-sheet__handle {
