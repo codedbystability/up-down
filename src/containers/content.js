@@ -91,8 +91,19 @@ const Content = () => {
             connectToMainSocket()
         else if (!window?.tcpSocketServer?.connected) {
             const interval4 = setInterval(() => {
-                if (!window?.tcpSocketServer?.connected)
+                if (!window?.tcpSocketServer?.connected){
                     window?.tcpSocketServer?.connect()
+                    window?.tcpSocketServer?.emit('leave', `UD~ACCOUNT~${user?.login}`)
+                    window?.tcpSocketServer?.emit('leave', 'ud-public')
+
+                    window?.tcpSocketServer?.off('balance:updated', handleBalanceUpdate)
+                    window?.tcpSocketServer?.off('user:check')
+
+                    window?.tcpSocketServer?.off('up:down:position:accepted', handlePositionAccepted)
+                    window?.tcpSocketServer?.off('up:down:position:not:accepted', handlePositionNotAccepted)
+
+                    window?.tcpSocketServer?.removeAllListeners()
+                }
                 else clearInterval(interval4);
             }, 2000);
         }
@@ -162,7 +173,6 @@ const Content = () => {
 
     const handlePositionAccepted = e => {
         const data = decrypt(e)
-        console.log('position = ', data)
 
 
         toast(t('notifications.position-accepted', {
