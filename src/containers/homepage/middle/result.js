@@ -117,11 +117,11 @@ const Result = props => {
                         </div>
 
                         {
-                            loading === null ?
+                            loading === 'null' ?
                                 <div className="nobets">
                                     <p>{t('bet.no-bets-placed')}</p>
                                 </div> :
-                                myBet?.isWin ?
+                                myBet?.isWin && false ?
                                     <div className="victory">
                                         <div className="victory__text">
                                             <img src="img/trophy.svg" alt=""/>

@@ -4,6 +4,7 @@ import Loading from "../../../components/loading";
 import myBets from "./my-bets";
 import Big from "big.js";
 import {useTranslation} from "react-i18next";
+import {formatHighWinner} from "../../../helpers/encryption";
 
 const HighWinners = () => {
     const {t} = useTranslation()
@@ -41,7 +42,12 @@ const HighWinners = () => {
                                             </span>
                                           </span>
                                                 <span className="user__price">
-                                                <span>{win?.currency}</span> {Big(win?.win_amount).toFixed(digits)}
+                                                    {formatHighWinner(win?.win_amount, {
+                                                        currency: '',
+                                                        decimals: digits
+                                                    })}
+                                                    {/*{Big(win?.win_amount).toFixed(digits)}*/}
+                                                    <span> {win?.currency}</span>
                                               </span>
                                             </div>
                                         </div>

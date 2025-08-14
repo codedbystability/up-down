@@ -172,3 +172,29 @@ export const getStyledContentReverse = (price, digits = 2) => {
         return ''
     }
 }
+
+
+export const formatHighWinner = (amount, {currency = '', decimals = 2} = {}) => {
+    if (typeof amount !== 'number') {
+        amount = Number(amount);
+        if (isNaN(amount)) return '';
+    }
+
+    const abs = Math.abs(amount);
+    let formatted;
+
+    if (abs >= 1_000_000_000) {
+        formatted = (amount / 1_000_000_000).toFixed(decimals) + 'B';
+    } else if (abs >= 1_000_000) {
+        formatted = (amount / 1_000_000).toFixed(decimals) + 'M';
+    } else if (abs >= 1_000) {
+        formatted = (amount / 1_000).toFixed(decimals) + 'K';
+    } else {
+        formatted = amount.toFixed(decimals);
+    }
+
+    // Remove trailing .00
+    formatted = formatted.replace(/\.0+$/, '').replace(/(\.\d*[1-9])0+$/, '$1');
+
+    return currency ? `${currency} ${formatted}` : formatted;
+}

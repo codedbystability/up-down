@@ -4,6 +4,7 @@ import Loading from "../../../components/loading";
 import InstrumentIcon from "../../../components/instrument-icon";
 import Big from "big.js";
 import {useTranslation} from "react-i18next";
+import {formatHighWinner} from "../../../helpers/encryption";
 
 const MyBets = () => {
 
@@ -39,7 +40,21 @@ const MyBets = () => {
                                     </span>
                                   </span>
                                         <span className="user__price">
-                                    <span>{myBet?.currency}</span> {parseFloat(myBet?.win_amount) > 0 ? Big(myBet?.win_amount).toFixed(digits) : `-${Big(myBet?.amount).toFixed(digits)}`}
+
+                                            {parseFloat(myBet?.win_amount) > 0 ?
+                                                formatHighWinner(myBet?.win_amount, {
+                                                    currency: '',
+                                                    decimals: digits
+                                                }) :
+                                                `-${
+                                                    formatHighWinner(myBet?.amount, {
+                                                        currency: '',
+                                                        decimals: digits
+                                                    })
+                                                }`}
+
+                                            <span>{myBet?.currency}</span>
+
                                   </span>
                                     </div>
                                 )
