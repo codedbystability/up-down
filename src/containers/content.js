@@ -216,6 +216,8 @@ const Content = () => {
             isFirstConnect = false
 
 
+            window?.tcpSocketServer?.removeAllListeners()
+
             window?.tcpSocketServer?.off('account:setuser', handleSetUser)?.on('account:setuser', handleSetUser)
 
 
