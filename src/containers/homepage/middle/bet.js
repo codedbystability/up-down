@@ -64,10 +64,17 @@ const MiddleBet = props => {
 
     const [amount, setAmount] = useState(50)
 
-    const onAmountChange = value => {
-        if (!value || value <= 0)
-            return setAmount('1')
 
+    const onAmountChange = value => {
+        const cleanValue = String(value).replace(/[^0-9]/g, '');
+        // If nothing left after cleaning → reset
+        if (cleanValue.length === 0) {
+            return setAmount('');
+        }
+
+        value = cleanValue;
+        if (!value)
+            return setAmount('')
 
         if (Number(value) >= Number(user?.balance))
             return setAmount(Number(user?.balance).toFixed(0))
