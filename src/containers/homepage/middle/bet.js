@@ -308,7 +308,7 @@ const MiddleBet = props => {
                                                 d="M16.314 11.4484H4.253C3.72915 11.4484 3.30469 11.0239 3.30469 10.5001C3.30469 9.97622 3.72915 9.55176 4.253 9.55176H16.314C16.8379 9.55176 17.2623 9.97622 17.2623 10.5001C17.2623 11.0239 16.8379 11.4484 16.314 11.4484Z"/>
                                         </svg>
                                     </button>
-                                    <input type="number" value={amount} onChange={e => onAmountChange(e.target.value)}/>
+                                    <input type="text" value={amount} onChange={e => onAmountChange(e.target.value)}/>
                                     <button type="button"
                                             onClick={e => onAmountChange(parseInt(amount) + 10)}
                                     >

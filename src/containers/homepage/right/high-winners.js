@@ -48,7 +48,7 @@ const HighWinners = () => {
                                                         decimals: digits
                                                     })}
                                                     {/*{Big(win?.win_amount).toFixed(digits)}*/}
-                                                    <span> {win?.currency}</span>
+                                                    <span>{` ${win?.currency}`}</span>
                                               </span>
                                             </div>
                                         </>

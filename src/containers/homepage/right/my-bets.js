@@ -67,7 +67,7 @@ const MyBets = () => {
                           formatHighWinner(myBet?.amount, {currency: '', decimals: digits})
                       }`
                   }
-                                    <span>{myBet?.currency}</span>
+                                    <span>{` ${myBet?.currency}`}</span>
                 </span>
                             </div>
                         );
