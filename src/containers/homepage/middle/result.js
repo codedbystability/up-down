@@ -117,7 +117,7 @@ const Result = props => {
                         </div>
 
                         {
-                            loading === 'null' ?
+                            loading === null ?
                                 <div className="nobets">
                                     <p>{t('bet.no-bets-placed')}</p>
                                 </div> :
