@@ -12,30 +12,18 @@ const MyBets = () => {
     const {t} = useTranslation();
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState([]);
-
-    const mountedRef = useRef(true);
-    const inFlightRef = useRef(false);
-
-    const fetchData = async (initial = false) => {
-        if (inFlightRef.current) return; // avoid overlap
-        inFlightRef.current = true;
-        try {
-            const res = await associateServices.getMyBets({});
-            if (mountedRef.current) setData(res?.data ?? []);
-        } catch (e) {
-            // optionally log
-        } finally {
-            if (initial && mountedRef.current) setLoading(false);
-            inFlightRef.current = false;
-        }
+    const fetchData = async () => {
+        const res = await associateServices.getMyBets({});
+        setData(res?.data ?? []);
+        setLoading(false)
     };
 
     useEffect(() => {
-        mountedRef.current = true;
-        fetchData(true); // initial
+
+        fetchData();
         const id = setInterval(fetchData, POLL_MS);
+
         return () => {
-            mountedRef.current = false;
             clearInterval(id);
         };
     }, []);
@@ -63,7 +51,12 @@ const MyBets = () => {
                   <InstrumentIcon code={myBet?.code}/>
                   <span>
                     <i>{myBet?.code}</i>
-                    <small>{t(`bet.gain-${myBet?.round?.result?.toLowerCase()}`)}</small>
+                      {
+                          myBet?.round?.result === null ?
+                              null
+                              :
+                              <small>{t(`bet.gain-${myBet?.round?.result?.toLowerCase()}`)}</small>
+                      }
                   </span>
                 </span>
 

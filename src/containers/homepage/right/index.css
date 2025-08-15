@@ -11,3 +11,12 @@
         transform: translateY(0);
     }
 }
+
+
+.list-loader .loading-container {
+    height: 20px;
+}
+
+.list-loader .loading-container::before {
+    height: 40px;
+}

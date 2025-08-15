@@ -25,15 +25,16 @@ const HighWinners = () => {
                     <span>{t('tabs.win')}</span>
                 </div>
                 <div className="xtable">
-                    <div className="xtable-fadeup">
-                        {
-                            data?.map(win => {
-                                const digits = ['TRY', 'USD', 'EUR'].includes(win?.currency) ? 2 : 8
-                                return (
-                                    <>
+                    <div className="xtable__content">
+                        <div className="xtable-fadeup">
 
-                                        <div className="xtable__content">
-                                            <div className={`user ${win?.way} is-win`}>
+                            {
+                                data?.map(win => {
+                                    const digits = ['TRY', 'USD', 'EUR'].includes(win?.currency) ? 2 : 8
+                                    return (
+                                        <>
+
+                                            <div className={`user fade-in ${win?.way} is-win`}>
                                           <span className="user__meta">
                                             <img src={`img/${win?.way}.svg`} alt=""/>
                                             <span>
@@ -50,13 +51,13 @@ const HighWinners = () => {
                                                     <span> {win?.currency}</span>
                                               </span>
                                             </div>
-                                        </div>
-                                    </>
-                                )
-                            })
-                        }
-                    </div>
+                                        </>
+                                    )
+                                })
+                            }
+                        </div>
 
+                    </div>
                 </div>
             </>
     )
