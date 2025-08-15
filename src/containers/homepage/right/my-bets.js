@@ -56,7 +56,7 @@ const MyBets = () => {
                         return (
                             <div
                                 key={myBet?.unique_id}
-                                className={`user ${myBet?.way} fade-in`}
+                                className={`user ${myBet?.way} fade-in ${isWin ? 'is-win' : 'is-lose'}`}
                                 style={{animationDelay: `${idx * 80}ms`}} // stagger
                             >
                 <span className="user__meta">

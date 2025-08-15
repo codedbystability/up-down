@@ -33,7 +33,7 @@ const HighWinners = () => {
                                     <>
 
                                         <div className="xtable__content">
-                                            <div className={`user ${win?.way}`}>
+                                            <div className={`user ${win?.way} is-win`}>
                                           <span className="user__meta">
                                             <img src={`img/${win?.way}.svg`} alt=""/>
                                             <span>

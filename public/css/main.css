@@ -4641,6 +4641,15 @@ input[type="range"]:focus {
     position: relative
 }
 
+.user.is-win {
+    border-left: 4px #66d535 solid;
+}
+
+
+.user.is-lose {
+    border-left: 4px #e32322 solid;
+}
+
 .user__meta {
     display: flex;
     flex-direction: row;
