@@ -332,7 +332,7 @@ const MiddleBet = props => {
                                     <input type="text"
                                            inputMode="numeric"     // mobile numeric keypad
                                            pattern="[0-9]*"        // hints some keyboards
-                                        // value={amount} onChange={e => onAmountChange(e.target.value)}/>
+                                        value={amount} onChange={e => onAmountChange(e.target.value)}/>
                                     <button type="button"
                                             onClick={e => onAmountChange(parseInt(amount) + 10)}
                                     >
