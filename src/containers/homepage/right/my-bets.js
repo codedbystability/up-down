@@ -44,21 +44,21 @@ const MyBets = () => {
                         return (
                             <div
                                 key={myBet?.unique_id}
-                                className={`user ${myBet?.way} fade-in ${isWin ? 'is-win' : 'is-lose'}`}
+                                className={`user ${isWin ? 'up' : 'down'} fade-in ${isWin ? 'is-win' : 'is-lose'}`}
                                 style={{animationDelay: `${idx * 80}ms`}} // stagger
                             >
-                <span className="user__meta">
-                  <InstrumentIcon code={myBet?.code}/>
-                  <span>
-                    <i>{myBet?.code}</i>
-                      {
-                          myBet?.round?.result === null ?
-                              null
-                              :
-                              <small>{t(`bet.gain-${myBet?.round?.result?.toLowerCase()}`)}</small>
-                      }
-                  </span>
-                </span>
+                                    <span className="user__meta">
+                                      <InstrumentIcon code={myBet?.code}/>
+                                      <span>
+                                        <i>{myBet?.code}</i>
+                                          {
+                                              myBet?.round?.result === null ?
+                                                  null
+                                                  :
+                                                  <small>{t(`bet.gain-${myBet?.round?.result?.toLowerCase()}`)}</small>
+                                          }
+                                      </span>
+                                    </span>
 
                                 <span className="user__price">
                   {isWin

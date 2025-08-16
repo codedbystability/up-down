@@ -29,7 +29,8 @@
     "round-id": "Round ID",
     "last-results": "Last Results",
     "gain-up": "Closed Up",
-    "gain-down": "Closed Down"
+    "gain-down": "Closed Down",
+    "gain-same": "Berabere Sonuçlandı"
   },
   "notifications": {
     "insufficent-balance": "Insufficient balance...",

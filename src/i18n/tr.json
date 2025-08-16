@@ -29,6 +29,7 @@
     "round-id": "Round Kimliği",
     "last-results": "Son Sonuçlar",
     "gain-up": "Yukarı Sonuçlandı",
+    "gain-same": "Berabere Sonuçlandı",
     "gain-down": "Aşağı Sonuçlandı"
   },
   "notifications": {

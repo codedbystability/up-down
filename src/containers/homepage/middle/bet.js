@@ -287,6 +287,27 @@ const MiddleBet = props => {
                                     <span>{t('bet.up')}</span>
                                   </span>
                                 </button>
+
+
+                                {/*<div style={{*/}
+                                {/*    position: 'absolute',*/}
+                                {/*    width: 100,*/}
+                                {/*    height: 100,*/}
+                                {/*    left: 'calc(50% - 50px)',*/}
+                                {/*    top: 'calc(50% - 50px)',*/}
+                                {/*    backgroundColor: '#f7931a',*/}
+                                {/*    borderRadius: '50%',*/}
+                                {/*    zIndex: 999999,*/}
+                                {/*    display: "flex",*/}
+                                {/*    alignItems: "center",*/}
+                                {/*    justifyContent: "center",*/}
+
+                                {/*}} className={'frame__oval'}>*/}
+
+                                {/*    DRAW*/}
+                                {/*    <br/>*/}
+                                {/*    <span className={'8x'}>8X</span>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
 
