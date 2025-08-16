@@ -10,6 +10,7 @@
     "high-winners": "Top Winners",
     "parity": "Symbol",
     "win": "Win",
+    "public-winners": "Public",
     "last-games": "Last {{amount}} Rounds"
   },
   "bet": {

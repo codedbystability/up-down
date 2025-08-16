@@ -3,6 +3,7 @@ import History from "./history";
 import HighWinners from "./high-winners";
 import {useState} from "react";
 import {useTranslation} from "react-i18next";
+import PublicWinners from "./public";
 
 const RightContent = () => {
     const {t}=useTranslation()
@@ -39,13 +40,23 @@ const RightContent = () => {
                         <span>{t('tabs.high-winners')}</span>
                     </button>
                 </li>
+
+                <li className="nav-item" role="presentation">
+                    <button
+                        className={activeTab === 'public-winners' ? 'active' : ''}
+                        onClick={e => setActiveTab('public-winners')}
+                    >
+                        <span>{t('tabs.public-winners')}</span>
+                    </button>
+                </li>
             </ul>
 
             <div className={'xtable-fadeup bottom'}>
                 {
                     activeTab === 'my-bets' ? <MyBets/> :
                         activeTab === 'history' ? <History/> :
-                            <HighWinners/>
+                        activeTab === 'high-winners' ? <History/> :
+                            <PublicWinners/>
 
                 }
             </div>

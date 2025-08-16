@@ -10,6 +10,7 @@
     "high-winners": "Çok Kazananlar",
     "parity": "Sembol",
     "win": "Kazanç",
+    "public-winners": "Havuzu",
     "last-games": "Son {{amount}} El"
   },
   "bet": {

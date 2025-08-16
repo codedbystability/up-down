@@ -19,6 +19,7 @@ class AssociateServices extends React.Component {
     getMyBets = (instance) => fetchInstance(CLIENT_API_URL + API_PREFIX + "binary/up-down/my-bets", "POST", instance);
     getLastResults = (instance) => fetchInstance(CLIENT_API_URL + API_PREFIX + "binary/up-down/last-results", "POST", instance);
     getHighWinners = (instance) => fetchInstance(CLIENT_API_URL + API_PREFIX + "binary/up-down/high-winners", "POST", instance);
+    getPublicBets = (instance) => fetchInstance(CLIENT_API_URL + API_PREFIX + "binary/up-down/public-bets", "POST", instance);
     getHistory = (instance) => fetchInstance(CLIENT_API_URL + API_PREFIX + "binary/up-down/history", "POST", instance);
 
     switchAccount = (instance) => fetchInstance(CLIENT_API_URL + API_PREFIX + "binary/user/switch", "POST", instance);
