@@ -51,7 +51,7 @@ const PublicWinners = () => {
                                             </span>
                                           </span>
                                                 <span className="user__price">
-                                                    {formatHighWinner(win?.win_amount, {
+                                                    {formatHighWinner(win?.win_amount||win?.amount, {
                                                         currency: '',
                                                         decimals: digits
                                                     })}
