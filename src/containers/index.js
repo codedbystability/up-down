@@ -88,7 +88,7 @@ const Containers = () => {
                                     label: found.code,
                                 }))
                             } else {
-                                let eth = res?.data.find(i => i.code === 'ETHUSD')
+                                let eth = res?.data.find(i => i.code === 'BTCUSD')
                                 if (!eth)
                                     eth = res?.data[0]
                                 store.dispatch(INFORMATION_ACTIONS.setParity({

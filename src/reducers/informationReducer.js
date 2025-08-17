@@ -275,10 +275,10 @@ import {HANDLE_SOUNDS_SETTINGS} from "./constants";
 const informationStates = {
     instruments: [],
     activeParity: {
-        code: 'ETHUSD',
-        label: 'ETHUSD',
-        value: 'ETHUSD',
-        desc: 'Etherium'
+        code: 'BTCUSD',
+        label: 'BTCUSD',
+        value: 'BTCUSD',
+        desc: 'Bitcoin'
     },
     betsAble: true,
     resolution: {
