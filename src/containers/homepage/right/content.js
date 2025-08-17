@@ -55,7 +55,7 @@ const RightContent = () => {
                 {
                     activeTab === 'my-bets' ? <MyBets/> :
                         activeTab === 'history' ? <History/> :
-                        activeTab === 'high-winners' ? <History/> :
+                        activeTab === 'high-winners' ? <HighWinners/> :
                             <PublicWinners/>
 
                 }
