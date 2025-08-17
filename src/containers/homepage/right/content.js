@@ -7,7 +7,7 @@ import PublicWinners from "./public";
 
 const RightContent = () => {
     const {t}=useTranslation()
-    const [activeTab, setActiveTab] = useState('my-bets')
+    const [activeTab, setActiveTab] = useState('high-winners')
 
     return (
         <>

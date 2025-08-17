@@ -54,10 +54,10 @@ const Header = () => {
             return console.error(t(`notifications.already-${accountType}`));
 
 
-        const balanceDrop = document.getElementById('dropdownBalance')
-        const itm = document.getElementById('balance-drop-content')
-        itm.classList.remove('show')
-        balanceDrop.classList.remove('show')
+        // const balanceDrop = document.getElementById('dropdownBalance')
+        // const itm = document.getElementById('balance-drop-content')
+        // itm.classList.remove('show')
+        // balanceDrop.classList.remove('show')
 
         store.dispatch({type: SET_LOADING_MANUALLY, data: true})
 
@@ -296,14 +296,14 @@ const Header = () => {
                                 <div className="dropdown-menu" aria-labelledby="drop02">
                                     <div className="header__drop-menu">
                                         <ul className="form__radio">
-                                            <li>
+                                            <li onClick={e => handleAccountChange('real-account')}>
                                                 <input id="acc1" type="radio" name="acc"/>
                                                 <label htmlFor="acc1">
                                                     <span>{t('general.real-account')}</span>
                                                     <span>{Big(user?.balance || 0).toFixed(2)}</span>
                                                 </label>
                                             </li>
-                                            <li>
+                                            <li onClick={e => handleAccountChange('demo-account')}>
                                                 <input id="acc2" type="radio" name="acc"/>
                                                 <label htmlFor="acc2">
                                                     <span>{t('general.demo-account')}</span>
