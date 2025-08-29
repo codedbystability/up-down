@@ -3617,11 +3617,11 @@ input[type="range"]:focus {
     }
 }
 
-@media (min-width: 1400px) {
-    .sidebar__tabs-nav button span {
-        font-size: 16px
-    }
-}
+/*@media (min-width: 1400px) {*/
+/*    .sidebar__tabs-nav button span {*/
+/*        font-size: 16px*/
+/*    }*/
+/*}*/
 
 .htp {
     display: flex;
