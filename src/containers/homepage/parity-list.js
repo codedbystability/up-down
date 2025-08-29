@@ -147,7 +147,7 @@ const ParityList = () => {
                                                 <span className="pair__price">
                                                         <PriceDisplay
                                                             amount={instrument.b}
-                                                            digits={instrument?.digits}/>
+                                                            digits={instrument.code === 'BTC' ? 5 : instrument?.digits}/>
                                                     {/*<span>$</span>86,526<span>.838</span>*/}
                                                       </span>
                                             </button>
